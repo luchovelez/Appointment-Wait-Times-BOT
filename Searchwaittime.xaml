@@ -1,0 +1,191 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Searchwaittime" this:Searchwaittime.in_City="Zagreb" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_City" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1208,2140</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Search wait time" sap:VirtualizedContainerService.HintSize="678,2075" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Visa Appointment Wait Times" sap:VirtualizedContainerService.HintSize="636,1983" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="70f4be55-65bc-46a5-a388-705798b0901d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1767" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtTableWaitTimes" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Select a'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="560,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="70f4be55-65bc-46a5-a388-705798b0901d" Text="[in_City]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html" DesignTimeRectangle="81, 645, 375, 27" ElementType="InputBox" FriendlyName="'Enter a City'" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='textbox' tag='INPUT' type='text' class='autocomplete_input input_helper_text autoInput ui-autocomplete-input' aaname='Select a U.S. Embassy or Consulate:' /&gt;" Guid="d4ec99a2-6e33-418b-b327-a26c95b34657" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXsAAAAfCAYAAAAGLG3zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATqSURBVHhe7Z2/SyNpAIbnz5hWuEa4wuUaLTcgaOAKhRQGNqDBYpGrgpUEjtzYLKkk1ZEmBxEUY3HgFQsRwrKxUKI2nrDoFSn8cUWEQwOu+t68yUxifp7k1t1MfB94is+MmWzzzDfffGuMk5MTSCmlHGwVeymlfAHWYu/z+TA5OYmpqSnMzMwgFAphdnYWc3NzCIfDUkopPSK7zX6z4y2xn5iYQCAQwPz8PCKRCKLRKGKxGCzLwvLyspRSSo/IbrPf7HhL7DmjZ+j54srKClKpFNbW1rCxsYFMJiOllNIjstvsNzveEnsu3XBGz9Bvbm4il8thd3cXBwcHODw8lFJK6RHZbfabHW+JPdd2OKvnlYAHHB8fo1gs4vz8HBcXF7i8vJRSStnnstfsNvvNjrfEnov5XOPh1H9vb69y4NXVFa6vr3Fzc4NyuSyllLLPZa/ZbfabHW+JPZ/ecmGfaz28BeCVgb9we3uLu7s73N/fSyml7HPZa3ab/WbHW2LP7TqMPRf3uebD2wFeIdzQPzw8SCml7HPd4LPf7PiTYs9bAjf0Qggh+h83+Oz3E2P/B342DBhNWjvOO/YdZRytRuD/jp/TxPCPEWT+cl6yKbwbgv/XU2ckhBCDSc+x/+VjDzP7HQtGII0zZ/g1OFsPwhy1kP3bHS/Y4zgK1WEjxTSmDQt5ZyiEEIPCF499PmZgOpZA5LUJwxxGeL06az5bnX50J+AGtYzCShDDpv0z+9jgSsH+SRW+j+9NGD77tXZ3DaUPcQS/t8/B2fpMAoV/nBcaKCA+YmJp231XkseS8QrxfWfEz7tqX354Iap9vmmkiyVsvbVf+82d9RdgmSasXWcohBAe4llibwQSOGJ8/0zAb0SQdVvbNLMvby/BDCRx+tkelLJYGmmMsPkmXX2tmdIWFuwgJyvLMXaUf3KC3YxzXLrojNtQiz1pmtlXLlBvt+wz2HxKwvf43yKEEB6i59jXZ8GMez3gDfG0s2k9jm1T7PNRA8H1eqQ5dn+38X26U7nAxNosvlTi3XvsK4E3q+PS7wv18AshhMd4nmWcJ8X+DOlA00XD9qmxL+8nEB4dqv/uc8S+sgzkQ/ITjzO7fh4hhOhnvnnslz5UBi10jT2XZ8wxWNvVeTaPbRv7/7mMQxj54HoWyfFq9IUQwot8w9iXkV20j609AG2ka+z5PlNpuL/ZMfbOA9rGB7wdHtCSNrEvv4/AmPTDP9JhB48QQniArxv7XQvmeAJHzpDr4NwWmecE/XMJ2dgC0s4e+K6x34/jlRlBlg+BS/Y5RjvFnlstgzD5wNhZbG/eetlwnrMMgsYCth7v7KncHRgwO7y/EEJ4gZ5j/3idnbqz566xtxObqGzJtJzYlupbL40h+BfT1V08Nl1jb98V5N/5MWSf13wdQTw6DWMxW9u22Qi3d4Yx5v6nqpk48s6ee9J4Hu7s4XOAIDK1U1eXmyLvtQ1HCOFdeoj9S/tzCadIjtuzfW3DEUJ4GMX+PyjvWBibzWjLpRDC0wx07H8IPI9CCOE1NLMXQogXQE+x98rfs283K/8StjuXlFL2s+x1179nr2+qklJK78ted/2mKn0HrZRSel/2mt3u+B20oVAI0WgUqVQKuVyu8q3kPJBXBn5bOW8HpJRS9rfsNbvNfrPjLbGXUko5uCr2Uko58J7gX75CvjWZn6JvAAAAAElFTkSuQmCC" InformativeScreenshot="89dec9dfd63d60bfbb018b7c8c2f739c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Visa Appointment Wait Times' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="81, 581, 255, 24" ElementType="Text" FriendlyName="'Select a'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Select a U.S. Embassy or Consulate:' check:innerText='Select a U.S. Embassy or Consulate:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQMAAAAcCAYAAABlJtoxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh7SURBVHhe7ZvfaxpLFMfvH5eXpSABCddCDfgigtDIpaUoJRhioRZqoT7UQAxXQjEUb0ACwkUIQi3UUBaCUATxbzn3zM+d3Z3ZWRNtcuk8fB7c+bFzzpz57vzyj9VqBQ6Hw+HEwOFwUJwYOBwOihMDh8NBcWLgcDgoTgwcDgfFiYHD4aBsQQxG0NjZgR2keDrTpDt+FaNj1g87xS7MNOmOx8TDj5uYGMyve1AvZ8GjDfMg82cZ6ucTmC/D+cz8j8TgpgtF3tbGlfL8qsEG0U4RujfKcw3399cKZqdF/j4N9xjITgyQmyE0yznIeMwXXrYAtdP1+ufX8MjEYI6DIMsbFCX7ZgQLJa+Z7Ri1lcC+pxhsxl9ODLbGd+xfLgJRsscjmOvKPBh3GTcz6Ba5TWiPPk96FDGYQmefV7zfgskCny3nMDzMcAfWYPAzKGjmdxGDTflLFQP7TGQdfm8x8KH3XNjfgSnpH3w++7vCZ3EZaI6jZR6SRyUGQWMy78ahTDF+kKlXMDXO/9WG0a1INxiVWAZZTqF/VFSmc2VoDn1MUwyWNGAkykWYX3ehtp9h7/Ey8feo3EsM1vCXhTRiIAf2ixZ0q3lm35M8NK98mJ7XIP+EpKNfjwbg8ymwLFOoQ/NVjpbxdovQ+nce1L2cwfBtGbK0PPN7/WIapK/mMDnF+nc9lo7l6TIoTfqwzt6vDLzZSYE/q0Df0C/RPiwe9WAy5+myzzJQf9dkdusGwo+gb2tfFsHznwOo8edBfFpslPFQhtZ5E4o0H/q62oeZXG4k1aEZtLHY048bczwH+SVS9DVtCfWpHkUMlAbv1aBvGgQ/sRF7SgME+22YUsdojLKWwXeXWMPDZKEx+pZeDMZN/bT9eQ98Xf57iUFKf6VgLTGI4nksUCQevLxgg91cBgeiT+r1oX+g8zsO3n/Ze/3P4kuq4kHxjPVtYvptHyr8WfGMCPsCBlWexzRbMUztvRLmJ7Gi9JlMwyVZrB7Zhx7GUCQtAvG/1gYRv7KuOOVzYpfNT3cUg8R4NovB7ExvT+0L/wjc9KBMRJR8TEaBUCbsGXhQqLZh+F1RVUQGrocDgCgUdniNdh463WCUtQwanaFlMqzjlj50+RRPdHSaKe/oDQ/spzhtx8AJvkIG8biXGKTzVxoCMYgSvF/az22bX7zkeXjQLifQesrz8ICLlll970h76eBUvp5UQJZDqIt02nfYDyX2O/d+gr/n0H/Bfu/g4PSt6cogOBxiOsYGH+i5j7ovFYrFa96HZOlF2nzdgjz5jXbW/kHfKn2WPR6aNwJT9iGdKfA25T8QG1Yw+ZBnZTFe6VJP1oWzkUvipym0xRKxOoDFOn5YQwzs8aypdxn4OGaPGDtpxIDgf6lDjlfG8CB3KKaeirJTJ5BnQYMKJ8SIqFH2Mj4qGU1PmP6nEQNCaFol2Y4YEJL9lY61xEDYjwO7QPMEX77hIc9DA1DnM13whJcJgqgYeKU2jOlsQsWWvoLpxxyrs9CBmWyzab2uE4sZdArsGV2OmfosSto+HDV4rOSg/ZU/i7ZTU1fYtzY/3E0MCMnxrKn3axtyNI9ij2x/HYYJcRkTAwoGyOi0ztdG7GVZui5WXq6DNihqlL1MMBjuKQamadUWxYBi9Jcmr4bAfvP7YvZr2h7NYxcD0zIhCMjo7CdTakL/a7DnYEsPZn016J3XWD4P+0MblLoBEWnzpsVAly/6Dk2eqG+T/aAZtGnEwBrPmnplW3Uk+0IvBgIM8o54GenAFAP7IcVgdMwDe68BQ1yOWOvdlBgIYv7S5NHwYGIg68Clxgn5Euu/TuSsvnXANiBpWbKXc6UM+KR0OW3NQHaP94+cIUbZhhhY9gx0fR19hyaPNh6NftAM2pgdcdvt8aypdyNiIKdLYScHDShDz8e10AGvOHWH2stsZpkQd8w6YhDacZa74AnOS+UvJX8CDyYGsSA3iIHAH0HzGS/PlyL2dKX/OZXPipCEEMKxgWVC2tOEjSwTeDlBzA93EYM08aypV87EFHtSEoiBspGSEWveJXZklasT/9JNP4nNlSJ0vrGyC38MnU8DfowSDyhrGcWA1jV5L67BTBuIuPZkJxBRFMe86NN6J+/5etUkBspmi1ftc5t9GIi7AsbpLJLSX9qyEbYuBmIDEQdImZehG4gyyLnfb/vwUqSTvpMDx4OaOKF4w31D3mFLJ+1EAvsISUG63gZiohgo90C8UnDPYHoidtr5QFf60b6BaBCDFH6Q+zn8BG1+Wecxn0IMjPGs5HlNNmjD9sgN1uUCphct6FrEIbRMmJ2VlSmOinLMMsdG644JMQ87joqLgb0MGmU4WpTn06GA0g8aKToxzGfa+mMYgmIztq/3nLTPg/y74GZhKn8Zdm5VwrZFiA5sMcjWEYMo4mhRCZwo7O7EAoM6q0lH++iRmS2d2yg3tZDdJozFcx1rHC0miwF+cPCrr19zY304wMTMhvg/3o9KH1pnBnY/kNMffayYxCBdPMulBIWJhN4eRByxpz1N0N21b14qHUu4ndCLL6ELQjKPRgysZRB66UjsauN79yvQHinTSVyP9+Vlmwr0fvDnKvhVH77lF5eeFKB10uBBaNq9ZswuW1CRO7bs3a2QzXoxIFj99QjEwKu2oateOlL8SnernzHbcq+60BJHYgfsa0R9+qFivpBjS6eMobnL2yKmswnELtpUu5pLR3YxIIT7B99PLlWR9hFhkfmil3Ty7P8LIj3NMiGFnwZHwWWx2ueOPMY1iUGqeJ6PoVVivvIUoZ1dNqGcZW2RPhQfxLRi4HBsnmDdH1q/Ox4VTgwc2+ebuOxkXq45Hh4nBo6toi6BvNemEyjHY8CJgWOrMDEgl3BaMBbrfsejxImBw+GgODFwOBwUJwYOhwNZwX/Bdz2+oH7SLQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'GO'" sap:VirtualizedContainerService.HintSize="560,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="70f4be55-65bc-46a5-a388-705798b0901d" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html" DesignTimeRectangle="460, 645, 33, 27" ElementType="Button" FriendlyName="'GO'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='autocomplete_submit autobtn' aaname='GO' check:text='GO' /&gt;" Guid="1d0d2f21-b6b4-4a49-b085-7aed4747eb15" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACUAAAAfCAYAAABgfwTIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVFhH7ZS9a8JAFMD7Pzn7B7i4OQqOLg5OTg5OCk5ugrOig+AgDm6iIEKh2BakSGojtZha60cRk2jyeu9qJCbXkliKKdyDH/l4l3e/vEvuShAE8Brelrr2+S4Ol3IKl3IKl3IKl3LKWVJiOg3yZAKg65TdagVSsXjM3/j9MG80QNtsAENTFFi223AbCJzU+Q7XUsNYDNT5nE5mDhQQMxk65q1eB13TDplDEPllq2Wrx8K11GulQgw02C0WtGODSATk8ZhOOqtWYRAOg3Lo4rLTgbtgkHYNJXfkZYbxOLOuGddSq26XvvhHv8/Mj5JJ2JOuYeeeUil6D0VQSJNleM7lbM9YcS217vWoFB5ZeUMKwXO89xCNgipJoKsqvBQKtmes/ErKEDBiVqtdRsq8fD9JsZZPJ3/hJJ+31bTiWsr40PfrNYyzWfr7b0ejo5TRFRzz3myefuhk6xASCWZdM66lcFJlOqUS5sBJpVKJjkEZuoeZg1xjl631WLiWQh7JEm1F8WsvIpPRzbNcpl3DPGvzRKH7UMhWi8VZUn8Nl3IKl3IKl3LK/5DyEh6UEuATOh71NoxIa/IAAAAASUVORK5CYII=" InformativeScreenshot="0581e18c7262ad26c264af81896124af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Visa Appointment Wait Times' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="81, 581, 255, 24" ElementType="Text" FriendlyName="'Select a'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Select a U.S. Embassy or Consulate:' check:innerText='Select a U.S. Embassy or Consulate:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtTableWaitTimes]" DelayBefore="5" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Nonimmigrant Visa Type' ReferenceIdx='0' Name='Nonimmigrant Visa Type'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Appointment Wait Time' ReferenceIdx='1' Name='Appointment Wait Time'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Nonimmigrant Visa Type' attr='text' /&gt;&lt;column name='Appointment Wait Time' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="560,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="70f4be55-65bc-46a5-a388-705798b0901d" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="81, 687, 675, 106" FriendlyName="'Visa Wait'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="fbc3355c-b4aa-48d4-919a-d336b437ea1b" InformativeScreenshot="68bbf7d6ec2357195a5751f10c33d9b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Visa Appointment Wait Times' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtTableWaitTimes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,612" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,496" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[CurrentRow(1).ToString.Contains(&quot;--&quot;)]" sap:VirtualizedContainerService.HintSize="484,303" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="242,115" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw Exception="[new BusinessRuleException(&quot;Data can no be Reached at this moment Please Retry the Transaction&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow(1).ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Select a'" sap:VirtualizedContainerService.HintSize="560,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="70f4be55-65bc-46a5-a388-705798b0901d" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html" DesignTimeRectangle="729, 632, 18, 16" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl parentid='visa_plan_ahead_rwd' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='visa_plan_ahead_rwd' tag='I' type='' class='fa fa-pencil-square-o' aaname='' /&gt;" Guid="f78fa109-7a2e-4778-9247-6d5d80e2a055" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAYAAACJfM0wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVDhPzdTBaoMwAAbgvZPP4QsU9gK7DfYOPRYfwcMOUhj0XHrooVC2XdxlKysWCSmlCpbQUQTlny6Jy5yNOivsh/9gEj6iCV49Gwb66H+FTfhTihRAsnLwrsx1gl/H3hcqo+IFvLp3kSRihTYU0Z0JMnbgX4/AQjEscnoowcFGzGjDwKwByDzkO40eQVQ89hDcnoFPE/5c3WynEpWROPUQDc1ibQu4ApWhM6xL6xvCGjQOcbC+dyrbAG6P5q2B/4bm1cP2mwbNbseS4mgr65VqYfLE+KAasVOy4Hes+kxq4O1LzAdllNc/fya8Wni/5mPpR4yU0R/ftBOsa2u4bWrh5j8hJczF7uY3mreAL92eYAOfI0LcHZsbccEAAAAASUVORK5CYII=" InformativeScreenshot="c6c2d1fe6bf3696e002efc2fd7fb7acc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Visa Appointment Wait Times' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="81, 581, 255, 24" ElementType="Text" FriendlyName="'Select a'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Select a U.S. Embassy or Consulate:' check:innerText='Select a U.S. Embassy or Consulate:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="560,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(f5)][u(hk)]" Version="V1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPXVMNTxpRELz/n5gm/bRpbaqmgtYTKRwiipxaW0A8BSkiqHyJ8rWgiAhUO91dgmlKsuHdvZ1582b2DPk93FzRvzW4vdaK7W7Q/o8wDbs1ff6/bwLucoGbcNsowXR/RtrZw+NDCxuBFYSDXjw9EJyYDXNxFj2qgMkgGMHq6aO7Oh7vm0xQhB3y4SJ7CIxu8NRvMbjF6w6/O8KeHcRdq6y9ghGswQvKpmK8uYZ+pwoM20qw9m1JFUiFLBOhgAknGtEee8OHs8yBkJDxu9cgJ2rDu/wFvfYl6pVTzM28xbuXU5h+Na73b15g+vUUAt4ldFmB6Z5FMvEdglUFIkeYxQdrdRHzn6ZVbjKxq40RPlHehYOrAmIfLjHq1ccKcul9vcKIwULiW1ngcqlR4gEGbTQu81iY+4AtNlQOk73M0U++qkPG5toqhawV3RACy7vI9//K6yttlLrnq1ULGSbKPSfg97ixvekng2OhSTT3TBD0LWPdbyrZpFn+MSBW1JzEx2lUxA8y+u0qCbO8FFDI8mCT7yogKfHlpl5AZN2LA05BnkWRmM0HksGRkXt+BrVSFoPutQ6OuC2k0ixVuUir8zthS1VUztNwzX9E+eyYjHbtgoq5lE6YbDrxbfg5CZ/HpUQB9kRMtXidScbwhwdLoiycHrGyIhkskySaVjXPw5FAt1lGfC/MA+QZFxvMRiObiqv03HEcfKjGKVgdZXk44Sh97GynVtCBkivVyqdajUpeU2pynKLmLOMogWDHHxObJcMhzENuPD9xsMWmiam3zZIqKOVT6gddn+OOryumC3byRernyg1axVySDuM7Ei916gU6iNpULfx63pdePd0wjL9ti3qOAcXCsQAAAABJRU5ErkJggg==" InformativeScreenshot="b1ee7135578f66dbb643c2ef8ca33100.png" Selector="&lt;html app='chrome.exe' title='Visa Appointment Wait Times' /&gt;" Url="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
